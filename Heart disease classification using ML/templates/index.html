@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        form { margin-top: 20px; }
+        input { margin: 5px; padding: 8px; }
+        button { padding: 10px 15px; background: blue; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h2>Enter Features for Heart disease  Prediction</h2>
+    <form action="/predict" method="post">
+        <input type="text" name="age" placeholder="Age" required>
+        <input type="text" name="sex" placeholder="Sex" required>
+        <input type="text" name="cp" placeholder="Chest Pain Type (cp)" required>
+        <input type="text" name="trestbps" placeholder="Resting BP (trestbps)" required>
+        <input type="text" name="chol" placeholder="Cholesterol (chol)" required>
+        <input type="text" name="fbs" placeholder="Fasting Blood Sugar (fbs)" required>
+        <input type="text" name="restecg" placeholder="Resting ECG (restecg)" required>
+        <input type="text" name="thalach" placeholder="Max Heart Rate (thalach)" required>
+        <input type="text" name="exang" placeholder="Exercise Angina (exang)" required>
+        <input type="text" name="oldpeak" placeholder="Oldpeak" required>
+        <input type="text" name="slope" placeholder="Slope" required>
+        <input type="text" name="ca" placeholder="Number of Major Vessels (ca)" required>
+        <input type="text" name="thal" placeholder="Thal" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction }}</h3>
+</body>
+</html>
